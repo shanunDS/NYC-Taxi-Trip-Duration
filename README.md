@@ -5,10 +5,10 @@ The research topic that our team has chosen is predicting the total ride duratio
 The dependent variable in this research is “trip_duration” which is the duration of the trip in seconds.There are 10 independent variables or features which we will use in our hypothesis to generate our predictions.
 
 # Team Members (Team 5):
-- 1)   Shanun Randev 
-- 2)   Anand Raj
-- 3)   Mowzli Sre 
-- 4)   Bala krishna Reddy
+-  Shanun Randev 
+-  Anand Raj
+- Mowzli Sre 
+-  Bala krishna Reddy
 
 # DataSet Details:
 
