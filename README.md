@@ -23,3 +23,7 @@ The dependent variable in this research is “trip_duration” which is the dura
 - Store_and_fwd_flag: Flag indicating whether the trip record was held in vehicle memory before sending to the vendor because the vehicle did not have a connection to the server
   - Y = store and forward
   - N = not a store and forward trip
+
+
+## Data Analysis:
+
