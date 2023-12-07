@@ -375,41 +375,41 @@ print("Best Hyperparameters:", random_search.best_params_)
 #--------------------------WARNING---------------------------------------------------------#
 # Note : This takes sometime so don't run this while building your model
 #------------------------------------------------------------------------------------------#
-from sklearn.svm import SVR
+# from sklearn.svm import SVR
 
-svr_model = SVR()
+# svr_model = SVR()
 
-# Random Search hyperparameter grid - SVR
-param_dist = {
-    'kernel': ['rbf'], # Try 'rbf' if not sure which performs better as trying each of them will take a lot of time
-    'C': expon(scale=1),
-    'gamma': expon(scale=1),
-}
+# # Random Search hyperparameter grid - SVR
+# param_dist = {
+#     'kernel': ['rbf'], # Try 'rbf' if not sure which performs better as trying each of them will take a lot of time
+#     'C': expon(scale=1),
+#     'gamma': expon(scale=1),
+# }
 
-# RandomizedSearchCV 
-random_search_svr = RandomizedSearchCV(
-    svr_model,
-    param_distributions=param_dist,
-    n_iter=10,
-    scoring='neg_mean_squared_error',  # Using negative MSE for regression
-    cv=5,
-    verbose=1,
-    random_state=123,
-    n_jobs=n_cores,
-)
+# # RandomizedSearchCV 
+# random_search_svr = RandomizedSearchCV(
+#     svr_model,
+#     param_distributions=param_dist,
+#     n_iter=10,
+#     scoring='neg_mean_squared_error',  # Using negative MSE for regression
+#     cv=5,
+#     verbose=1,
+#     random_state=123,
+#     n_jobs=n_cores,
+# )
 
-random_search_svr.fit(X_train, y_train)
+# random_search_svr.fit(X_train, y_train)
 
-best_svr_model = random_search_svr.best_estimator_
+# best_svr_model = random_search_svr.best_estimator_
 
-# Predictions
-y_pred_svr = best_svr_model.predict(X_test)
+# # Predictions
+# y_pred_svr = best_svr_model.predict(X_test)
 
-# Root mean squared error on the test set
-rmse_svr = np.sqrt(mean_squared_error(y_test, y_pred_svr))
-print("Root Mean Squared Error on Test Set (SVR):", rmse_svr)
+# # Root mean squared error on the test set
+# rmse_svr = np.sqrt(mean_squared_error(y_test, y_pred_svr))
+# print("Root Mean Squared Error on Test Set (SVR):", rmse_svr)
 
-# Best hyperparameters from the RandomizedSearchCV
-print("Best Hyperparameters (SVR):", random_search_svr.best_params_)
+# # Best hyperparameters from the RandomizedSearchCV
+# print("Best Hyperparameters (SVR):", random_search_svr.best_params_)
 
 #%%
