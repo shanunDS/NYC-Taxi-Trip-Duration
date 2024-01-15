@@ -234,3 +234,15 @@ XGBoost with Hyper-Parameter Tuning
 - Root Mean Squared Error on Training Set: 221.09
 - Root Mean Squared Error on Test Set: 224.68
 
+Best Hyperparameters:   subsample: 0.9, n_estimators: 200, max_depth: 6, learning_rate: 0.2
+
+### Compare LR vs XGBoost
+
+![image](https://github.com/shanunDS/Group5-project/assets/66896800/fe12c505-f4da-4b39-986b-638ce45ed8ab)
+
+## Conclusion
+- Haversine Formula was used to compute the trip distance for a given coordinate
+- We found that cluster around Manhattan had the more the pickup points, including Harlem, Wall Street, Columbus Circle and Manhattan Community Board
+- We  analysed the time series and found the peak hours were from 6pm to 10pm and most taxi demands were on Friday and Saturday
+- The maximum Avg. Speed was recorded to be 24 Km/hr with higher activity in the weekends
+- XGBoost with Hyper Parameter Tuning turned out to be the best fit model to our dataset with ~3.7 minutes  error for a given coordinate
